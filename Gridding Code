@@ -1,0 +1,26 @@
+%Gridding the Data from Nadir Points to Filled in nxn Degree squares
+
+cell_lat_range=1;
+cell_lon_range=1;
+
+grid_lon_left_edge=-180:cell_lon_range:180;
+grid_lat_bottom_edge=-90:cell_lat_range:90;
+
+grid_lon_center=grid_lon_left_edge(1:(length(grid_lon_left_edge)-1))+ cell_lon_range/2;
+grid_lat_center=grid_lat_bottom_edge(1:(length(grid_lat_bottom_edge)-1))+ cell_lat_range/2;
+
+
+data_grid=NaN*ones(length(grid_lat_center),length(grid_lon_center));
+data_grid_count=NaN*ones(length(grid_lat_center),length(grid_lon_center));
+
+
+
+for rr=1:length(grid_lat_center)
+for cc=1:length(grid_lon_center)
+
+         keep_tes=find(tes_lat<(grid_lat_center(rr)+cell_lat_range/2) & tes_lat>(grid_lat_center(rr)-cell_lat_range/2) & tes_lon<(grid_lon_center(cc)+cell_lon_range/2) &  tes_lon>(grid_lon_center(cc)-cell_lon_range/2));          
+         data_grid_count(rr,cc)=length(keep_tes);
+         data_grid(rr,cc)=mean(tes_o3_464(keep_tes));
+
+end  %% end of cc loop to step through each column
+end  %% end of rr loop to step through each row
