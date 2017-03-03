@@ -7,3 +7,5 @@ Dr. Tracey Holloway, University of Wisconsin - Madison (and my old boss) and I h
 The TES analysis MATLab files used to generate plots and create level 2 products. I presented the research at the 2015 American Geophysical Union Fall Meeting in San Francisco and at the 2016 American Meteorological Society meeting in New Orleans, both in oral and poster presentation form. 
 
 Thanks to Owen Cooper, John Worden, and the Hollings Boulder crew. And Creighton. 
+
+Open License
