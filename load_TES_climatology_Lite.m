@@ -1,5 +1,5 @@
 %% Script to View NetCDF files in Matlab
-% Dr. Owen Cooper, ESRL
+% Dr. Owen Cooper, Ryan Kladar ESRL
 
 
 
